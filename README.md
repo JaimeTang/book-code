@@ -5,7 +5,7 @@
 * Python-3.5  
 * PyTorch-0.4.1
 
-## 数据集
+## 使用的数据集
 猫狗数据集下载地址：https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/data
 
 ## 作者其他链接
