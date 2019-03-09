@@ -10,7 +10,9 @@
 
 ## 作者其他链接
 作者知乎主页：https://www.zhihu.com/people/JaimeTang/activities   
-作者博客主页： 
+
+## 问题 
+读者如果发现书中有问题，希望提issues给本人，作者会及时解答，谢谢! 
 
 ## 封面
 ![简介](image/10.jpg)  
