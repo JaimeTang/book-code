@@ -1,5 +1,76 @@
-《深度学习之PyTorch实战计算机视觉》全书代码
+# 本书纠错
+
+## 第3章  
+
+P40  
+原文：  
+...，虽然梯度下降已被广泛应用，但是其自身**纯**在许多不足，...  
+纠正：  
+...，虽然梯度下降已被广泛应用，但是其自身存在许多不足，...  
+
+## 第6章
+
+P171  
+原代码：  
+```python
+transform=transforms.Compose([transforms.ToTensor(),
+                              transforms.Normalize(mean=[0.5,0.5,0.5],std=[0.5,0.5,0.5])])
+```
+纠正代码：  
+```python
+transform=transforms.Compose([transforms.ToTensor(),
+                              transforms.Normalize(mean=[0.5],std=[0.5])])
+```
+
+P173  
+原代码：  
+```python
+images, labels = next(iter(data_loader_train))
+
+img = torchvision.utils.make_grid(images)
+img = img.numpy().transpose(1,2,0)
+
+std = [0.5,0.5,0.5]
+mean = [0.5,0.5,0.5]
+img = img*std+mean
+print([labels[i] for i in range(64)])
+plt.imshow(img)
+```
+纠正代码：  
+```python
+images, labels = next(iter(data_loader_train))
+
+img = torchvision.utils.make_grid(images)
+img = img.numpy().transpose(1,2,0)
+
+std = [0.5]
+mean = [0.5]
+img = img*std+mean
+print([labels[i] for i in range(64)])
+plt.imshow(img)
+```
+
+P177  
+原代码：  
+```python
+loss.backward()
+optimizer.step()
+running_loss += loss.data[0]
+running_correct += torch.sum(pred == y_train.data)
+```
+
+纠正代码：
+```python
+loss.backward()
+optimizer.step()
+running_loss += loss.data
+running_correct += torch.sum(pred == y_train.data)
+```
+
 ---
+
+# 《深度学习之PyTorch实战计算机视觉》全书代码
+
 ## 版本
 以下版本可以成功运行书中全部代码  
 * Python-3.5  
