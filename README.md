@@ -36,8 +36,9 @@ P40
 ## 第5章  
 
 P77  
+
 原文：  
-（3）conda remove -n test **-all**：在命令行窗口中输入“conda remove -n test **-all**”并回车，... ；“-all”表示删除指定环境下所有已经安装的包。
+（3）conda remove -n test **-all**：在命令行窗口中输入“conda remove -n test **-all**”并回车，... ；“**-all**”表示删除指定环境下所有已经安装的包。  
 纠正：  
 （3）conda remove -n test --all：在命令行窗口中输入“conda remove -n test --all”并回车，...  ；“--all”表示删除指定环境下所有已经安装的包。 
 
