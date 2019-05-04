@@ -156,6 +156,80 @@ transform = transforms.Compose([transforms.CenterCrop(224),
 纠正代码：
 代码冗余进行删除。
 
+## 第9章
+
+P234    
+原文：  
+...，如果为偶数，**则极有可能会出现结果无法判断的情况**。  
+纠正： 
+...，如果为偶数，还需要多一步结果的随机抽选。 
+
+
+P236    
+原文：  
+...，比如在Kaggle比赛中就经常会用到各种各样的多模型融合实例。  
+纠正： 
+...，比如在Kaggle比赛中就经常会用到各种各样的多模型融合~~实例~~。 
+
+## 第10章
+
+P256 
+原代码：  
+```python
+print("Loss is:{:.4f}, Train Accuracy is:{:.4f}%, Test Accuracy is:{:.4f}".format(running_loss/len(dataset_train),100*running_correct/len(dataset_train),100*testing_correct/len(dataset_test)))
+```
+纠正代码：
+代码前多加4个空格。
+
+## 第11章
+
+P264 
+原代码：  
+```python
+img1 = torchvision.utils.make_grid(X_test)
+img1 = img1.numpy().transpose(1,2,0)
+std = [0.5,0.5,0.5]
+mean = [0.5,0.5,0.5]
+img1 = img1*std+mean
+```
+纠正代码：
+```python
+img1 = torchvision.utils.make_grid(X_test)
+img1 = img1.numpy().transpose(1,2,0)
+std = [0.5]
+mean = [0.5]
+img1 = img1*std+mean
+```
+
+P265、P271
+原代码：  
+```python
+transform = transforms.Compose([transforms.ToTensor(),
+                                     transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5])])
+
+
+std = [0.5,0.5,0.5]
+mean = [0.5,0.5,0.5]
+```
+纠正代码：
+```python
+transform = transforms.Compose([transforms.ToTensor(),
+                                     transforms.Normalize(mean=[0.5], std=[0.5])])
+
+
+std = [0.5]
+mean = [0.5]
+```
+
+P273
+原代码：  
+```python
+print("Loss is:{:.4f}".format(running_loss/len(dataset_train)))
+```
+纠正代码：
+代码前多加4个空格。
+
+
 ---
 
 # 《深度学习之PyTorch实战计算机视觉》全书代码
