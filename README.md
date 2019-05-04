@@ -173,7 +173,7 @@ P236
 
 ## 第10章
 
-P256 
+P256   
 原代码：  
 ```python
 print("Loss is:{:.4f}, Train Accuracy is:{:.4f}%, Test Accuracy is:{:.4f}".format(running_loss/len(dataset_train),100*running_correct/len(dataset_train),100*testing_correct/len(dataset_test)))
@@ -183,7 +183,7 @@ print("Loss is:{:.4f}, Train Accuracy is:{:.4f}%, Test Accuracy is:{:.4f}".forma
 
 ## 第11章
 
-P264 
+P264   
 原代码：  
 ```python
 img1 = torchvision.utils.make_grid(X_test)
@@ -201,7 +201,7 @@ mean = [0.5]
 img1 = img1*std+mean
 ```
 
-P265、P271
+P265、P271   
 原代码：  
 ```python
 transform = transforms.Compose([transforms.ToTensor(),
@@ -221,7 +221,7 @@ std = [0.5]
 mean = [0.5]
 ```
 
-P273
+P273  
 原代码：  
 ```python
 print("Loss is:{:.4f}".format(running_loss/len(dataset_train)))
